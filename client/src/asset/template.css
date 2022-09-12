@@ -1,0 +1,45 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(2, 1fr) max-content/max-content repeat(2, 1fr);
+    grid-template-areas:
+        'h m m'
+        'h m m'
+        'f f f';
+}
+
+header {
+    background-color: black;
+    color: white;
+    grid-area: h;
+    width: 200px;
+    overflow: auto;
+    resize: horizontal;
+    min-width: 100px;
+    max-width: 300px;
+}
+
+main {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    grid-area: m;
+    grid-template-rows: max-content;
+}
+.main{
+    overflow: auto;
+    justify-content: center;
+
+}
+footer {
+    background-color: rgb(17, 17, 17);
+    color: white;
+    grid-area: f;
+}
+/* ******** */
+.main-content {
+    overflow: auto;
+    grid-template-columns: repeat(auto-fill,minmax(100px,200px));
+    gap: 20px;
+    grid-auto-rows: 300px;
+    justify-content: center;
+}

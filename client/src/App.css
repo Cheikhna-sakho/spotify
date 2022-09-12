@@ -1,0 +1,42 @@
+
+@import url('./asset/setting.css');
+@import url('./asset/template.css');
+
+.logo{
+  min-width: 10%;
+  max-width: 190px;
+}
+.searchBox {
+  border-radius: 0 10px;
+  background-color: white;
+  padding: 0 5px;
+  align-items: flex-start;
+}
+#searchPut{
+  border: none;
+  outline: none;
+}
+.card{
+  grid-template-rows: 70% 30%;
+  /* **** */
+  padding: 10px;
+  /* background-color: rgb(134, 134, 255); */
+  background-color: rgb(52, 50, 50);
+  box-shadow: 1px 1px 10px black;
+}
+.img-cover,.card{
+  border-radius: 10px;
+}
+.main-header{
+  background-color: rgb(15, 14, 14);
+}
+.swiper{
+  grid-gap: 10px;
+}
+/* .card{
+  width: calc(100%/5.5);
+  height: calc(100%/2.5);
+  padding: 20px;
+  background-color: rgb(134, 134, 255);
+  margin-bottom: 20px;
+} */

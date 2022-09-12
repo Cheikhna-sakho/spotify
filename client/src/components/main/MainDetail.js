@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import Card from "../card/Card";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import CardDetail from "../card/CardDetail";

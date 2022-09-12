@@ -9,8 +9,5 @@ const NavListerner = ({ element, className}) => {
             )}
         </ul>
     )
-    // if (navList) {
-    //     <NavLink to={`/${e.name.toLowerCase()}`} > </NavLink>
-    //   }
 }
 export default NavListerner;

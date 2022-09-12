@@ -15,8 +15,6 @@ const Card = ({ lib }) => {
         <p className="description elips">{lib.description}</p>
       </div>
     </article>
-        // return <Layout main={<div>salut</div>}/>;
-
   )
 }
 export default Card;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Card from "../card/Card";
-// import { useNavigate } from "react-router-dom";
 
 const MainHome = () => {
     const [albums, setAlbums] = useState([]);
@@ -11,7 +10,6 @@ const MainHome = () => {
                 console.log("data", res.data);
                 setAlbums(res.data);
             }).catch(er => console.log(er));
-        // console.log(albums,"album");
     }, []);
 
     console.log(albums); 

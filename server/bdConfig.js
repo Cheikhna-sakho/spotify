@@ -1,8 +1,10 @@
+require('dotenv').config();
 const mysql = require('mysql2');
+const env = process.env;
 const bd = mysql.createConnection({
-    host: 'localhost',
-    user: 'cheikh',
-    password: 'CHei0101.',
+    host: env.DB_HOST,
+    user: env.DB_USER,
+    password: env.DB_PASSWORD,
     database: 'spotify',
     socketPath: '/var/run/mysqld/mysqld.sock'
 })

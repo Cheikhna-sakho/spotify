@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { AudioContextData, ControllerContextData } from "../../contexts/Audio";
 import Track from "./Track";
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 const MainDetail = () => {
     const { id } = useParams();
     const {  setSound } = AudioContextData();
@@ -12,7 +12,7 @@ const MainDetail = () => {
     const [albums, setAlbums] = useState([]);
     const [tracks, setTracks] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3232/albums/' + id)
+        axios.get(process.env.REACT_APP_BASE_URL+'/albums/' + id)
             .then(res => {
                 console.log("data", res.data);
                 setAlbums(res.data.slice(0, 1));

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Card from "../card/Card";
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 const MainHome = () => {
     const [albums, setAlbums] = useState([]);
+    console.log(BASE_URL);
     useEffect(() => {
-        axios.get('http://localhost:3232/albums')
+        axios.get(process.env.REACT_APP_BASE_URL+'/albums')
             .then(res => {
                 console.log("data", res.data);
                 setAlbums(res.data);

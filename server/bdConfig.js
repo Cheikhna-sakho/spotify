@@ -5,7 +5,7 @@ const bd = mysql.createConnection({
     host: env.DB_HOST,
     user: env.DB_USER,
     password: env.DB_PASSWORD,
-    database: 'spotify',
+    database: env.DB_NAME,
     socketPath: '/var/run/mysqld/mysqld.sock'
 })
 bd.connect(function (err) {

@@ -1,0 +1,9 @@
+header {
+    background-color: black;
+    color: white;
+    width: 200px;
+    overflow: auto;
+    resize: horizontal;
+    min-width: 100px;
+    max-width: 300px;
+}

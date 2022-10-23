@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv-flow').config();
 const mysql = require('mysql2');
 const env = process.env;
 const bd = mysql.createConnection({

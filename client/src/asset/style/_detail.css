@@ -1,0 +1,35 @@
+.main-detail{
+    grid-template-rows: 45% auto;
+}
+.detail-cover{
+    /* background: var(--url) no-repeat;
+    background-size: 100% 100%; */
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.5);
+    gap: 20px;
+}
+
+.track-item {
+    gap: 15px;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    user-select: none;
+}
+.track-item:hover{
+    background: gray;
+}
+/* ol{
+    display: grid;
+    gap: 20px;
+} */
+.track-name span{
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.track-name span:hover{
+    text-decoration: underline;
+}
+
+.track-name h3,.track-name span{
+}

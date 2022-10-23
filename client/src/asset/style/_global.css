@@ -1,0 +1,21 @@
+.flex{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+.grid-row {
+    grid-auto-flow: row;
+    display: grid;
+    /* justify-content: space-between; */
+}
+.elips{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.grid-col {
+    grid-auto-flow: column;
+    display: grid;
+    /* justify-content: space-between; */
+}

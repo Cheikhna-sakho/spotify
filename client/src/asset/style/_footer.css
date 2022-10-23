@@ -1,0 +1,44 @@
+.music-box {
+    overflow: hidden;
+    padding: 10px;
+    background-color: rgb(17, 17, 17);
+    max-height: 100px;
+    color: white;
+    grid-auto-rows: 100%;
+    align-items: center;
+}
+
+.controller{
+    padding: 10px 0px;
+    grid-auto-columns: max-content;
+    gap: 20px;
+    align-items: center;
+}
+.audio-controller{
+    padding: 10px;
+    cursor: pointer;
+}
+audio{
+    display: none;
+}
+.progressive-audio{
+    padding: 10px 0px;
+    gap: 10px;
+}
+.progesse-fill {
+    width: 200px;
+    background: grey;
+    height: 5px;
+}
+.fill,.progesse-fill{
+    border-radius: 10px;
+}
+.fill{
+    height: 100%;
+}
+.sound {
+    grid-auto-rows: 100%;
+    gap: 10px;
+    width: 50%;
+    height: 80%;
+}

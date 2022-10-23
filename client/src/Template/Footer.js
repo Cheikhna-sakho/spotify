@@ -1,33 +1,77 @@
-import Listerner from "../components/listerner/Listerner";
-
+// import Listerner from "../components/listerner/Listerner";
+import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BiSkipNext, BiSkipPrevious, BiRepeat } from "react-icons/bi";
+import { FaRandom } from "react-icons/fa";
+import { AudioContextData, ControllerContextData } from "../contexts/Audio";
+import Track from "../components/main/Track";
 const Footer = () => {
-    const icon_alea = "https://img.icons8.com/windows/32/000000/shuffle.png";
-    const icon_arriere = "https://img.icons8.com/ios-glyphs/30/000000/rewind.png";
-    const icon_pause = "https://img.icons8.com/ios-filled/50/000000/pause--v1.png";
-    const icon_suivant = "https://img.icons8.com/ios-glyphs/30/000000/fast-forward.png";
-    let audioIcon = [
+    const { audio, audioSrc, audiocurrentTime, sound } = AudioContextData();
+    const { playAudio, stopAudio } = ControllerContextData();
+    const togglePlayAudio = () => {
+        if (!audio.current.paused) {
+            return stopAudio();
+        }
+        return playAudio();
+    }
+    const controller = [
         {
-            name: 'Aleatoir',
-            icon: icon_alea
+            icon: <FaRandom />,
+            command: () => { }
         },
         {
-            name: 'arriere',
-            icon: icon_arriere
+            icon: <BiSkipPrevious />,
+            command: () => { }
         },
         {
-            name: 'Pause',
-            icon: icon_pause
+            icon: <BsFillPlayCircleFill />,
+            command: togglePlayAudio
         },
         {
-            name: 'Suivant',
-            icon: icon_suivant
+            icon: <BiSkipNext />,
+            command: () => { }
         },
+        {
+            icon: <BiRepeat />,
+            command: () => { }
+        }
     ]
+    // console.log(sound.track);
     return (
         <footer>
-            <Listerner element={audioIcon} name={false} />
-            <audio src=""></audio>
+            {sound && <section className="music-box grid-col">
+                <article className="sound grid-col">
+                    <div className="sound-cover">
+                        <img src={sound?.cover_small} alt="sound cover" />
+                    </div>
+                    <Track sound={sound} />
+                </article>
+                <article className="control-box">
+                    <div className="controller flex">
+                        {controller
+                            .map(({ icon, command }, i) => (
+                                <div key={i} className="audio-controller" onClick={command}>
+                                    {icon}
+                                </div>
+                            ))}
+                    </div>
+                    <div className="progressive-audio flex">
+                        <div className="actual-time">
+                            00
+                        </div>
+                        <div className="progesse-fill">
+                            <div className="fill">
 
+                            </div>
+                        </div>
+                        <div className="rest-time">
+                            1:03
+                            current == {audioSrc && audiocurrentTime}
+                        </div>
+                    </div>
+                    <audio ref={audio} src={sound.mp3}></audio>
+                </article>
+            </section>
+            }
         </footer>
     )
 }

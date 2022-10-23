@@ -9,14 +9,17 @@ const Header = () => {
   const icon_like = "https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-like-music-kiranshastry-gradient-kiranshastry.png";
   let nav = [
     {
+      route:"/",
       name: 'Acceuil',
       icon: icon_home
     },
     {
+      route:"/recherche",
       name: 'Recherche',
       icon: icon_search
     },
     {
+      route:"/bibliotheque",
       name: 'Bibliotheque',
       icon: icon_bib
     }
@@ -39,7 +42,7 @@ const Header = () => {
         <NavListerner element={nav} name={true} />
         {/* <Listerner element={//} name={true} navList={true} /> */}
       </nav>
-      <Listerner className='more' element={more} name={true} />
+      {/* <Listerner className='more' element={more} name={true} /> */}
     </header>
   );
 }

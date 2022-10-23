@@ -1,21 +1,26 @@
-.flex{
+.flex {
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
     align-items: center;
-  }
+}
+
 .grid-row {
     grid-auto-flow: row;
     display: grid;
-    /* justify-content: space-between; */
 }
-.elips{
+
+.elips {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .grid-col {
     grid-auto-flow: column;
     display: grid;
-    /* justify-content: space-between; */
+}
+
+.center {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }

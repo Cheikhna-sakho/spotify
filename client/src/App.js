@@ -11,9 +11,10 @@ function App() {
   return (
     <AudioContextProvider>
       <Routes>
-        <Route path="/" element={<Acceuil />} />
+        
+        <Route exact path="/" element={<Acceuil />} />
         <Route path="/:id" element={<Article />} />
-        <Route path="/recherche" element={<Recherche />} />
+        <Route exact path="/recherche" element={<Recherche />} />
         <Route path='*' element={<Acceuil />} />
       </Routes>
     </AudioContextProvider>

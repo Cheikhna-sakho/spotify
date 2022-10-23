@@ -14,20 +14,20 @@ export const AudioContextProvider = ({ children }) => {
         return audio.current.pause();
     }
     const startAudio = (src) => {
-        setAudioSrc(src);
+        sound(src);
         return;
     }
     const pauseAudio = () => {
         return audio.current.duration = 0;
     }
     useEffect(() => {
-        console.log("o");
+        // console.log("pause?",audiocurrentTime);
         !audio.current?.paused && setInterval(() => setAudioCurrentTime(audio.current?.currentTime), 1000)
     })
 
     useEffect(() => {
-        audioSrc && playAudio();
-    }, [audioSrc]);
+        sound && playAudio();
+    }, [sound]);
 
     const data = {
         contextController: { playAudio, startAudio, pauseAudio, stopAudio },

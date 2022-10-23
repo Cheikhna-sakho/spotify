@@ -6,48 +6,50 @@ import Track from "./Track";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const MainDetail = () => {
     const { id } = useParams();
-    const {  setSound } = AudioContextData();
+    const { setSound } = AudioContextData();
     const { startAudio } = ControllerContextData();
-
     const [albums, setAlbums] = useState([]);
     const [tracks, setTracks] = useState([]);
     useEffect(() => {
-        axios.get(process.env.REACT_APP_BASE_URL+'/albums/' + id)
+        axios.get(process.env.REACT_APP_BASE_URL + '/albums/' + id)
             .then(res => {
                 console.log("data", res.data);
                 setAlbums(res.data.slice(0, 1));
                 setTracks(res.data);
             }).catch(error => console.log(error));
     }, [id])
+
     return (
-        <section className="main main-detail grid-row">
-            {
-                albums.map(({ album, album_desc, cover_small }, i) => {
-                    return (
-                        <article key={i} className="detail-cover grid-col" >
-                            {/* style={{ "--url": `url("${cover}")` }} */}
-                            <div className="detail-cover">
-                                <img src={cover_small} alt="album_cover" />
-                            </div>
-                            <p>{album_desc}</p>
-                        </article>
-                    )
-                })
-            }
-            <div className="sounds">
+        <section className="page detail-page">
+            <div className="detail-header ">
+                {
+                    albums.map(({ album, album_desc, cover_small }, i) => {
+                        return (
+                            <article key={i} className="detail-album grid-col center" >
+
+                                {/* style={{ "--url": `url("${cover}")` }} */}
+                                <div className="detail-cover">
+                                    <img src={cover_small} alt="album_cover" />
+                                </div>
+                                <p className="detail-desc">
+                                    {album_desc && album_desc}
+                                    {!album_desc && "Pas de description"}
+                                </p>
+                            </article>
+                        )
+                    })
+                }
+            </div>
+
+            <div className="sounds center">
                 <h2># Titre</h2>
-                {/* <hr /> */}
                 <ol>
-                    {tracks.map(({ track, artist, artist_id,cover_small, mp3 }, i) => (
-                        <li key={i} className="track-item flex" onClick={() => {startAudio(mp3);setSound({track,artist,artist_id,cover_small})}}>
+                    {tracks.map(({ track, artist, artist_id, cover_small, mp3, duration }, i) => (
+                        <li key={i} className="track-item flex" onClick={() => setSound({ track, artist, artist_id, cover_small, mp3, duration })}>
                             <div className="index">
                                 {i + 1}
                             </div>
-                            <Track sound={{track,artist,artist_id}}/>
-                            {/* <div className="track-name grid-row">
-                                <h3>{track}</h3>
-                                <span id={artist_id}>{artist}</span>
-                            </div> */}
+                            <Track sound={{ track, artist, artist_id }} />
                         </li>
                     ))}
                 </ol>

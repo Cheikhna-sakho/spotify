@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+// import env from 'react-dotenv';
 import Card from "../card/Card";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 const MainHome = () => {
     const [albums, setAlbums] = useState([]);
-    console.log(BASE_URL);
+    console.log(BASE_URL,"url");
     useEffect(() => {
-        axios.get(process.env.REACT_APP_BASE_URL+'/albums')
+        axios.get(`${BASE_URL}/albums`)
             .then(res => {
                 console.log("data", res.data);
                 setAlbums(res.data);
@@ -15,7 +16,7 @@ const MainHome = () => {
 
     console.log(albums); 
     return (
-        <section className="main-content grid-row">
+        <section className="home-page page">
             {
                 albums.map(album => {
                     return (

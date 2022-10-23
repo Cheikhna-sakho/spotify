@@ -20,17 +20,17 @@ main {
     grid-area: m;
     grid-template-rows: max-content;
 }
-.main{
+.page{
+    
     overflow: auto;
-    justify-content: center;
-
+    display: grid;
+    grid-auto-flow: row;
 }
 
 
 
 /* ******** */
-.main-content {
-    overflow: auto;
+.home-page {
     grid-template-columns: repeat(auto-fill,minmax(100px,200px));
     gap: 20px;
     grid-auto-rows: 300px;

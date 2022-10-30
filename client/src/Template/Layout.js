@@ -4,12 +4,13 @@ import Main from "./Main";
 // import Main from "./Main";
 
 
-const Layout = ({ main, bar }) => {
-    <div className="App container">
-        <Header />
-        <Main page={main}/>
-        {/* {main} */}
-        <Footer />
-    </div>
+const Layout = ({ children }) => {
+    return (
+        <div className="App container">
+            <Header />
+            {children}
+            <Footer />
+        </div>
+    )
 }
 export default Layout;

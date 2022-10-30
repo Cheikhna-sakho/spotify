@@ -1,0 +1,45 @@
+.search-page{
+    gap: 3em;
+}
+.search-content{
+    grid-auto-rows: max-content;
+gap: 2em;
+}
+.genres-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2em;
+    grid-auto-rows: max-content;
+}
+
+.search-top{
+    align-items: center;
+}
+/* //FORM// */
+.searchBox {
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    grid-template-columns: max-content 1fr;
+    gap: 15px;
+    background-color: white;
+    padding: 10px 20px;
+    align-items: center;
+  }
+  #searchPut {
+    width: 100%;
+    border: none;
+    outline: none;
+    /* text-align: center; */
+  }
+
+  .search-icon{
+    color: black;
+  }
+  
+  form {
+    margin-left: 5%;
+    width: 25%;
+  }

@@ -1,9 +1,19 @@
 header {
+    gap: 2em;
     background-color: black;
     color: white;
+    padding: 1em;
     width: 200px;
+    align-items: center;
+    display: grid;
+    grid-auto-rows: max-content;
     overflow: auto;
     resize: horizontal;
     min-width: 100px;
     max-width: 300px;
 }
+.logo{
+    min-width: 10%;
+    max-width: 190px;
+  }
+  

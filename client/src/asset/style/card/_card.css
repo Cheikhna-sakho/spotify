@@ -1,11 +1,13 @@
 .card{
     grid-template-rows: 70% 30%;
-    /* **** */
+    cursor: pointer;
     padding: 10px;
-    /* background-color: rgb(134, 134, 255); */
-    background-color: rgb(52, 50, 50);
     box-shadow: 1px 1px 10px black;
+    transition: all .3s ease;
+  }
+  .card:hover{
+    background-color: rgb(52, 50, 50);
   }
   .img-cover,.card,.card .skeleton{
-    border-radius: 10px;
+    border-radius: 5px;
   }

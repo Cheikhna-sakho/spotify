@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ lib }) => {
   const navigate = useNavigate();
   const redirectId = () => {
-    return navigate(`/${lib.id}`);
+    return navigate(`/albums/${lib.id || lib.album_id}`);
   }
   return (
     <article className="card grid-row" onClick={redirectId} key={lib.id}>

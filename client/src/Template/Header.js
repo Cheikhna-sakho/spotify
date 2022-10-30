@@ -1,22 +1,22 @@
 import NavListerner from '../components/listerner/NavListener';
 import img_logo from '../asset/logo_spotify.png';
+import { MdHomeFilled } from "react-icons/md";
+import { BiSearch } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+
 const Header = () => {
-  const icon_home = "https://img.icons8.com/nolan/64/home.png";
-  const icon_search = "https://img.icons8.com/nolan/64/google-web-search.png";
-  const icon_bib = "https://img.icons8.com/nolan/64/music-library.png";
-  // const icon_playlist = "https://img.icons8.com/nolan/64/add.png";
-  // const icon_like = "https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-like-music-kiranshastry-gradient-kiranshastry.png";
+
   let nav = [
     {
       route: "/",
-      name: 'Acceuil',
-      icon: icon_home
+      name: 'Accueil',
+      icon: <MdHomeFilled />
     },
-    // {
-    //   route: "/recherche",
-    //   name: 'Recherche',
-    //   icon: icon_search
-    // },
+    {
+      route: "/search",
+      name: 'Recherche',
+      icon: <BiSearch />
+    },
     // {
     //   route: "/bibliotheque",
     //   name: 'Bibliotheque',
@@ -27,11 +27,15 @@ const Header = () => {
 
   return (
     <header>
-      <div className="logo"><img src={img_logo} alt="" /></div>
+      <div className="logo">
+        <Link to={"/"}>
+          <img src={img_logo} alt="" />
+        </Link>
+      </div>
       <nav>
         <NavListerner element={nav} name={true} />
       </nav>
-    </header>
+    </header >
   );
 }
 export default Header;

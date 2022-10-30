@@ -7,11 +7,13 @@ require("./bdConfig");
 //Root
 const AlbumRoot = require("./router/Album");
 const ArtisteRoot = require("./router/Artiste");
+const GenreRoot = require("./router/Genre");
 //Midleware
 app.use(cors());
 //
 app.use('/albums', AlbumRoot);
 app.use('/artistes', ArtisteRoot);
+app.use('/genres', GenreRoot);
 app.listen(port, () => console.log(`Server demarer au ${port}`));
 
 

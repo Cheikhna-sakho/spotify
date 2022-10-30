@@ -8,7 +8,7 @@ import Track from "../components/main/Track";
 import { useEffect, useState } from "react";
 import Jauge from "../components/Jauge";
 const Footer = () => {
-    const { audio, audioSrc, audiocurrentTime, setAudioCurrentTime, sound } = AudioContextData();
+    const { audio, audiocurrentTime, sound } = AudioContextData();
     const { playAudio, stopAudio } = ControllerContextData();
     const [DisplayTime, setDisplayTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -91,8 +91,8 @@ const Footer = () => {
                     <audio ref={audio} src={sound.mp3}></audio>
                 </article>
                 <div className="volum-box flex">
-                    <div className="volum-icon" onClick={() => volum == 0 ? setVolum(50) : setVolum(0)}>
-                        {volum == 0 ? <ImVolumeMute2 /> : <ImVolumeMedium />}
+                    <div className="volum-icon" onClick={() => volum === 0 ? setVolum(50) : setVolum(0)}>
+                        {volum === 0 ? <ImVolumeMute2 /> : <ImVolumeMedium />}
                     </div>
                     <Jauge index={volum} total={100} onChanged={(e) => { setVolum(e.target.value); return audio.current.volume = e.target.value / 100 }} value={volum} max={100} />
                 </div>

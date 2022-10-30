@@ -1,0 +1,19 @@
+.track-item {
+    gap: 15px;
+    align-items: center;
+    border-radius: 10px;
+    user-select: none;
+}
+.track-item:hover{
+    background: gray;
+}
+.track-name span{
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.track-name span:hover{
+    text-decoration: underline;
+}
+.sounds h2,.track-item{
+    padding: 5px 15px;
+}

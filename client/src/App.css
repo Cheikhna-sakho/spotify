@@ -7,28 +7,19 @@
 @import url('./asset/style/card/_card.css');
 @import url('./asset/style/_detail.css');
 @import url('./asset/style/_skeleton.css  ');
+@import url('./asset/style/_search.css');
+@import url('./asset/style/_home.css');
+@import url('./asset/style/_genre.css');
+@import url('./asset/style/_track.css');
 /* @import url('./asset/style'); */
 
 
-.logo{
-  min-width: 10%;
-  max-width: 190px;
-}
-.searchBox {
-  border-radius: 0 10px;
-  background-color: white;
-  padding: 0 5px;
-  align-items: flex-start;
-}
-#searchPut{
-  border: none;
-  outline: none;
-}
 
-.main-header{
-  background-color: rgb(15, 14, 14);
-  height: 3em;
-}
+
+
+
+
+
 .swiper{
   grid-gap: 10px;
 }

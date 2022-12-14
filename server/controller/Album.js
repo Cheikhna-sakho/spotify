@@ -2,7 +2,7 @@ const Model = require(__basedir + "/model/Model");
 const Query = require(__basedir + "/model/Query");
 const joinQuery = require(__basedir + "/model/JoinQuery");
 exports.findAll = (req, res) => {
-    Model(Query.findAll("albums"), res);
+    Model(Query.findAll("albums","ORDER BY RAND() LIMIT 20"), res);
 }
 exports.find = (req, res) => {
     id = req.params.id;

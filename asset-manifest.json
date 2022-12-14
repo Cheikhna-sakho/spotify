@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/spotify/static/css/main.521deca4.css",
-    "main.js": "/spotify/static/js/main.85dc4369.js",
+    "main.css": "/spotify/static/css/main.42ddf1f1.css",
+    "main.js": "/spotify/static/js/main.99c9f262.js",
     "static/js/787.c4e7f8f9.chunk.js": "/spotify/static/js/787.c4e7f8f9.chunk.js",
     "static/media/logo_spotify.png": "/spotify/static/media/logo_spotify.770a601dd4f6b285742f.png",
     "index.html": "/spotify/index.html",
-    "main.521deca4.css.map": "/spotify/static/css/main.521deca4.css.map",
-    "main.85dc4369.js.map": "/spotify/static/js/main.85dc4369.js.map",
+    "main.42ddf1f1.css.map": "/spotify/static/css/main.42ddf1f1.css.map",
+    "main.99c9f262.js.map": "/spotify/static/js/main.99c9f262.js.map",
     "787.c4e7f8f9.chunk.js.map": "/spotify/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.521deca4.css",
-    "static/js/main.85dc4369.js"
+    "static/css/main.42ddf1f1.css",
+    "static/js/main.99c9f262.js"
   ]
 }
